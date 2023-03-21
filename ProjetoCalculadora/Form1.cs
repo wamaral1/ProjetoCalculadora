@@ -69,15 +69,18 @@ namespace ProjetoCalculadora
                 txtOperacao = comboBoxOperacao.SelectedIndex.ToString();
                 if (txtOperacao == "3")
                 {
-                    if (txtValor2.Text =="0")
-                    { 
-                    MessageBox.Show("Para realizar esta operacao " +
-                        "o Campo Valor 2 nao pode ser " +
-                        "0", "ATENCAO!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (txtValor2.Text == "0")
+                    {
+                        MessageBox.Show("Para realizar esta operacao " +
+                            "o Campo Valor 2 nao pode ser " +
+                            "0", "ATENCAO!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtResultado.Text = "";
                     }
                     else
+                    {
                         resultado = valor1 / valor2;
-                    txtResultado.Text = resultado.ToString();
+                        txtResultado.Text = resultado.ToString();
+                    }
                 }
                 
             }

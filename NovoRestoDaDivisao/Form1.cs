@@ -21,6 +21,11 @@ namespace NovoRestoDaDivisao
                 "c#", "Sobre!!!", MessageBoxButtons.OK);
         }
 
+        private void txtDivisor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public Form1()
         {
             InitializeComponent();

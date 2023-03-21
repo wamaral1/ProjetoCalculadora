@@ -72,7 +72,7 @@
             // sOBREToolStripMenuItem
             // 
             this.sOBREToolStripMenuItem.Name = "sOBREToolStripMenuItem";
-            this.sOBREToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sOBREToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sOBREToolStripMenuItem.Text = "Sobre";
             this.sOBREToolStripMenuItem.Click += new System.EventHandler(this.sOBREToolStripMenuItem_Click);
             // 
@@ -91,6 +91,7 @@
             this.txtDivisor.Name = "txtDivisor";
             this.txtDivisor.Size = new System.Drawing.Size(195, 31);
             this.txtDivisor.TabIndex = 2;
+            this.txtDivisor.TextChanged += new System.EventHandler(this.txtDivisor_TextChanged);
             // 
             // lblDivisor
             // 

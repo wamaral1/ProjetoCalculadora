@@ -36,20 +36,20 @@
             this.txtSalarioMinimo = new System.Windows.Forms.TextBox();
             this.txtHorasTrabalhadas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxTurno = new System.Windows.Forms.GroupBox();
             this.radioButtonNoturno = new System.Windows.Forms.RadioButton();
             this.radioButtonVespertino = new System.Windows.Forms.RadioButton();
             this.radioButtonMatutino = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbxCategoria = new System.Windows.Forms.GroupBox();
             this.radioButtonCalouro = new System.Windows.Forms.RadioButton();
             this.radioButtonVeterano = new System.Windows.Forms.RadioButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.txtSituacaoRemuneracao = new System.Windows.Forms.TextBox();
+            this.lbxResumo = new System.Windows.Forms.ListBox();
+            this.txtSituacaoEstagiario = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbxTurno.SuspendLayout();
+            this.gbxCategoria.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,7 +73,7 @@
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -93,6 +93,7 @@
             this.txtSalarioMinimo.Name = "txtSalarioMinimo";
             this.txtSalarioMinimo.Size = new System.Drawing.Size(144, 20);
             this.txtSalarioMinimo.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtSalarioMinimo, "Informe o Salário Mínimo");
             // 
             // txtHorasTrabalhadas
             // 
@@ -111,17 +112,17 @@
             this.label2.Text = "Horas Trabalhadas: ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // groupBox1
+            // gbxTurno
             // 
-            this.groupBox1.Controls.Add(this.radioButtonNoturno);
-            this.groupBox1.Controls.Add(this.radioButtonVespertino);
-            this.groupBox1.Controls.Add(this.radioButtonMatutino);
-            this.groupBox1.Location = new System.Drawing.Point(295, 46);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(99, 92);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Turno:";
+            this.gbxTurno.Controls.Add(this.radioButtonNoturno);
+            this.gbxTurno.Controls.Add(this.radioButtonVespertino);
+            this.gbxTurno.Controls.Add(this.radioButtonMatutino);
+            this.gbxTurno.Location = new System.Drawing.Point(295, 46);
+            this.gbxTurno.Name = "gbxTurno";
+            this.gbxTurno.Size = new System.Drawing.Size(99, 92);
+            this.gbxTurno.TabIndex = 5;
+            this.gbxTurno.TabStop = false;
+            this.gbxTurno.Text = "Turno:";
             // 
             // radioButtonNoturno
             // 
@@ -157,16 +158,16 @@
             this.radioButtonMatutino.UseVisualStyleBackColor = true;
             this.radioButtonMatutino.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // groupBox2
+            // gbxCategoria
             // 
-            this.groupBox2.Controls.Add(this.radioButtonCalouro);
-            this.groupBox2.Controls.Add(this.radioButtonVeterano);
-            this.groupBox2.Location = new System.Drawing.Point(12, 102);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(185, 47);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Categoria:";
+            this.gbxCategoria.Controls.Add(this.radioButtonCalouro);
+            this.gbxCategoria.Controls.Add(this.radioButtonVeterano);
+            this.gbxCategoria.Location = new System.Drawing.Point(12, 102);
+            this.gbxCategoria.Name = "gbxCategoria";
+            this.gbxCategoria.Size = new System.Drawing.Size(185, 47);
+            this.gbxCategoria.TabIndex = 6;
+            this.gbxCategoria.TabStop = false;
+            this.gbxCategoria.Text = "Categoria:";
             // 
             // radioButtonCalouro
             // 
@@ -190,26 +191,27 @@
             this.radioButtonVeterano.Text = "Veterano";
             this.radioButtonVeterano.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lbxResumo
             // 
-            this.listBox1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 14;
-            this.listBox1.Location = new System.Drawing.Point(12, 155);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(382, 158);
-            this.listBox1.TabIndex = 9;
+            this.lbxResumo.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxResumo.FormattingEnabled = true;
+            this.lbxResumo.ItemHeight = 14;
+            this.lbxResumo.Location = new System.Drawing.Point(12, 155);
+            this.lbxResumo.Name = "lbxResumo";
+            this.lbxResumo.Size = new System.Drawing.Size(382, 158);
+            this.lbxResumo.TabIndex = 9;
             // 
-            // txtSituacaoRemuneracao
+            // txtSituacaoEstagiario
             // 
-            this.txtSituacaoRemuneracao.BackColor = System.Drawing.Color.Yellow;
-            this.txtSituacaoRemuneracao.Enabled = false;
-            this.txtSituacaoRemuneracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSituacaoRemuneracao.ForeColor = System.Drawing.Color.Blue;
-            this.txtSituacaoRemuneracao.Location = new System.Drawing.Point(12, 323);
-            this.txtSituacaoRemuneracao.Name = "txtSituacaoRemuneracao";
-            this.txtSituacaoRemuneracao.Size = new System.Drawing.Size(296, 20);
-            this.txtSituacaoRemuneracao.TabIndex = 8;
+            this.txtSituacaoEstagiario.BackColor = System.Drawing.Color.Yellow;
+            this.txtSituacaoEstagiario.Enabled = false;
+            this.txtSituacaoEstagiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSituacaoEstagiario.ForeColor = System.Drawing.Color.Blue;
+            this.txtSituacaoEstagiario.Location = new System.Drawing.Point(12, 323);
+            this.txtSituacaoEstagiario.Name = "txtSituacaoEstagiario";
+            this.txtSituacaoEstagiario.Size = new System.Drawing.Size(296, 20);
+            this.txtSituacaoEstagiario.TabIndex = 8;
+            this.txtSituacaoEstagiario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCalcular
             // 
@@ -219,14 +221,13 @@
             this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
-            this.toolTip1.Tag = "sad ffs aas ";
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Ajuda";
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // Form1
             // 
@@ -234,10 +235,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 355);
             this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.txtSituacaoRemuneracao);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtSituacaoEstagiario);
+            this.Controls.Add(this.lbxResumo);
+            this.Controls.Add(this.gbxCategoria);
+            this.Controls.Add(this.gbxTurno);
             this.Controls.Add(this.txtHorasTrabalhadas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSalarioMinimo);
@@ -251,10 +252,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbxTurno.ResumeLayout(false);
+            this.gbxTurno.PerformLayout();
+            this.gbxCategoria.ResumeLayout(false);
+            this.gbxCategoria.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,15 +270,15 @@
         private System.Windows.Forms.TextBox txtSalarioMinimo;
         private System.Windows.Forms.TextBox txtHorasTrabalhadas;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxTurno;
         private System.Windows.Forms.RadioButton radioButtonNoturno;
         private System.Windows.Forms.RadioButton radioButtonVespertino;
         private System.Windows.Forms.RadioButton radioButtonMatutino;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbxCategoria;
         private System.Windows.Forms.RadioButton radioButtonCalouro;
         private System.Windows.Forms.RadioButton radioButtonVeterano;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox txtSituacaoRemuneracao;
+        private System.Windows.Forms.ListBox lbxResumo;
+        private System.Windows.Forms.TextBox txtSituacaoEstagiario;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.ToolTip toolTip1;
     }
