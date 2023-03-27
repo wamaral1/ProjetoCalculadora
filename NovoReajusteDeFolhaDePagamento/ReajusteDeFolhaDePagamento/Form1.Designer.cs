@@ -33,13 +33,13 @@
             this.dgvLeitura = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPercentualDoReajuste = new System.Windows.Forms.Label();
+            this.lblTotalComReajuste = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ofdListaFuncionarios = new System.Windows.Forms.OpenFileDialog();
             this.lblTotalSemReajuste = new System.Windows.Forms.Label();
-            this.lblTotalComReajuste = new System.Windows.Forms.Label();
-            this.lblPercentualDoReajuste = new System.Windows.Forms.Label();
+            this.ofdListaFuncionarios = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.iniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +69,7 @@
             // 
             // dgvLeitura
             // 
+            this.dgvLeitura.AllowUserToAddRows = false;
             this.dgvLeitura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLeitura.Location = new System.Drawing.Point(12, 175);
             this.dgvLeitura.Name = "dgvLeitura";
@@ -89,7 +90,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.30303F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.69697F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
             this.tableLayoutPanel1.Controls.Add(this.lblPercentualDoReajuste, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblTotalComReajuste, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
@@ -104,12 +105,28 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(504, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // lblPercentualDoReajuste
+            // 
+            this.lblPercentualDoReajuste.AutoSize = true;
+            this.lblPercentualDoReajuste.Location = new System.Drawing.Point(333, 50);
+            this.lblPercentualDoReajuste.Name = "lblPercentualDoReajuste";
+            this.lblPercentualDoReajuste.Size = new System.Drawing.Size(0, 13);
+            this.lblPercentualDoReajuste.TabIndex = 5;
+            // 
+            // lblTotalComReajuste
+            // 
+            this.lblTotalComReajuste.AutoSize = true;
+            this.lblTotalComReajuste.Location = new System.Drawing.Point(169, 50);
+            this.lblTotalComReajuste.Name = "lblTotalComReajuste";
+            this.lblTotalComReajuste.Size = new System.Drawing.Size(0, 13);
+            this.lblTotalComReajuste.TabIndex = 4;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Yellow;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(334, 0);
+            this.label3.Location = new System.Drawing.Point(333, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 20);
             this.label3.TabIndex = 2;
@@ -131,18 +148,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Yellow;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(170, 0);
+            this.label2.Location = new System.Drawing.Point(169, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Total com reajuste";
-            // 
-            // ofdListaFuncionarios
-            // 
-            this.ofdListaFuncionarios.DefaultExt = "*.txt:";
-            this.ofdListaFuncionarios.Filter = "Arquivos textos|*.txt:";
-            this.ofdListaFuncionarios.Title = "Seleção do arquivo com dados de funcionários";
-            this.ofdListaFuncionarios.FileOk += new System.ComponentModel.CancelEventHandler(this.ofdListaFuncionarios_FileOk);
             // 
             // lblTotalSemReajuste
             // 
@@ -152,21 +162,12 @@
             this.lblTotalSemReajuste.Size = new System.Drawing.Size(0, 13);
             this.lblTotalSemReajuste.TabIndex = 3;
             // 
-            // lblTotalComReajuste
+            // ofdListaFuncionarios
             // 
-            this.lblTotalComReajuste.AutoSize = true;
-            this.lblTotalComReajuste.Location = new System.Drawing.Point(170, 50);
-            this.lblTotalComReajuste.Name = "lblTotalComReajuste";
-            this.lblTotalComReajuste.Size = new System.Drawing.Size(0, 13);
-            this.lblTotalComReajuste.TabIndex = 4;
-            // 
-            // lblPercentualDoReajuste
-            // 
-            this.lblPercentualDoReajuste.AutoSize = true;
-            this.lblPercentualDoReajuste.Location = new System.Drawing.Point(334, 50);
-            this.lblPercentualDoReajuste.Name = "lblPercentualDoReajuste";
-            this.lblPercentualDoReajuste.Size = new System.Drawing.Size(0, 13);
-            this.lblPercentualDoReajuste.TabIndex = 5;
+            this.ofdListaFuncionarios.DefaultExt = "*.txt:";
+            this.ofdListaFuncionarios.Filter = "Arquivos textos|*.txt:";
+            this.ofdListaFuncionarios.Title = "Seleção do arquivo com dados de funcionários";
+            this.ofdListaFuncionarios.FileOk += new System.ComponentModel.CancelEventHandler(this.ofdListaFuncionarios_FileOk);
             // 
             // menuStrip1
             // 
